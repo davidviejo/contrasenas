@@ -2,7 +2,7 @@ from flask import Blueprint, render_template_string, request, jsonify
 import secrets
 import string
 
-bp = Blueprint("password_generator", __name__, url_prefix="/program/password_generator")
+bp = Blueprint("password_generator", __name__, url_prefix="/programa/generador-de-contraseñas")
 
 def generar_contrasena_segura(longitud, include_symbols=True):
     try:
