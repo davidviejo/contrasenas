@@ -30,6 +30,7 @@ html_template = """
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Generador de Contraseñas IA</title>
+  <!-- Carga el CSS -->
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
@@ -49,8 +50,8 @@ html_template = """
       <button onclick="copyPassword()" title="Copiar al portapapeles">📋 Copiar</button>
     </div>
     <p id="statusMessage"></p>
+    <!-- Carga el JS -->
     <script src="/static/script.js"></script>
-  </div>
 </body>
 </html>
 """
@@ -67,3 +68,4 @@ def generate():
     password = generar_contrasena_segura(longitud, include_symbols)
     strength = "Buena" if len(password) >= 12 else "Regular"
     return jsonify({"password": password, "strength": strength})
+
