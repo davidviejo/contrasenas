@@ -19,7 +19,7 @@ function generatePassword() {
   const length = document.getElementById('passwordLength').value;
   const includeSymbols = document.getElementById('includeSymbols').checked;
   simulateProgress(() => {
-    fetch('/program/password_generator/generate', {
+    fetch('/programa/generador-de-contrasenas/generate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json; charset=UTF-8' },
       body: JSON.stringify({ length: length, include_symbols: includeSymbols })
